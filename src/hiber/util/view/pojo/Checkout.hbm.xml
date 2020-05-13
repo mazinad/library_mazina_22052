@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 13, 2020 12:45:42 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="hiber.util.view.pojo.Checkout" table="checkout" schema="public" optimistic-lock="version">
+        <id name="clientId" type="string">
+            <column name="client_id" length="8" />
+            <generator class="assigned" />
+        </id>
+        <property name="clientNames" type="string">
+            <column name="client_names" length="25" />
+        </property>
+        <property name="bookId" type="string">
+            <column name="book_id" length="8" />
+        </property>
+        <property name="bookTitle" type="string">
+            <column name="book_title" length="25" />
+        </property>
+        <property name="author" type="string">
+            <column name="author" length="25" />
+        </property>
+        <property name="issuedate" type="date">
+            <column name="issuedate" length="13" />
+        </property>
+        <property name="comment" type="string">
+            <column name="comment" length="25" />
+        </property>
+    </class>
+</hibernate-mapping>
